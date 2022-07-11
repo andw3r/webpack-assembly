@@ -1,0 +1,57 @@
+// ===== Colors ===== //
+$bs-primary: #0d6efd;
+$bs-secondary: #6c757d;
+$bs-success: #198754;
+$bs-info: #0dcaf0;
+$bs-warning: #ffc107;
+$bs-danger: #dc3545;
+$bs-light: #f8f9fa;
+$bs-dark: #212529;
+// ===== / Colors ===== //
+
+// ===== Breakpoints ===== //
+$breakpoint-sm: 576px; // Small
+$breakpoint-md: 768px; // Medium
+$breakpoint-lg: 992px; // Large
+$breakpoint-xl: 1200px; // Extra large
+$breakpoint-xxl: 1400px; // Extra extra large
+// ===== / Breakpoints ===== //
+
+// ===== Container ===== //
+@media (max-width: $breakpoint-sm) {
+  .container {
+    max-width: 540px;
+  }
+} // Extra Small
+
+@media (min-width: $breakpoint-sm) {
+  .container {
+    max-width: 540px;
+  }
+} // Small
+
+@media (min-width: $breakpoint-md) {
+  .container {
+    max-width: 720px;
+  }
+} // Medium
+
+@media (min-width: $breakpoint-lg) {
+  .container {
+    max-width: 960px;
+  }
+} // Large
+
+@media (min-width: $breakpoint-xl) {
+  .container {
+    max-width: 1140px;
+  }
+} // Extra large
+
+@media (min-width: $breakpoint-xxl) {
+  .container {
+    max-width: 1320px;
+  }
+} // Extra extra large
+
+// ===== / Container ===== //

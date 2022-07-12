@@ -4,6 +4,7 @@ const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -90,5 +91,6 @@ module.exports = {
       template: "./src/index.html",
     }),
     new MiniCssExtractPlugin({ filename: "./css/style.[hash].css" }),
+    new HtmlMinimizerPlugin(),
   ],
 };

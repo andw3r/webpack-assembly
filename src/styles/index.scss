@@ -1,8 +1,10 @@
-@import "./reset";
-// @import "./fonts";
-// @import "./vars";
+// import basic styles
+@import "base/reset";
+@import "base/vars";
+@import "base/fonts";
 
 body {
+  font-size: 100%;
 }
 
-@import "media";
+@import "base/media";

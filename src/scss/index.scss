@@ -1,0 +1,8 @@
+@use "sass:math";
+// basic styles
+@import "./base/vars";
+@import "./base/reset";
+@import "./base/global";
+@import "./base/fonts";
+
+@import "./base/media";

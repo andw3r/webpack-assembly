@@ -14,7 +14,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "js/bundle.[contenthash].js",
     clean: true,
-    assetModuleFilename: "[hash].[ext]",
+    assetModuleFilename: "assets/img/[hash].[ext]",
   },
 
   devServer: {
@@ -24,6 +24,7 @@ module.exports = {
     port: 3000,
     open: true,
     compress: true,
+    historyApiFallback: true,
   },
 
   module: {
@@ -43,22 +44,13 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico|webp)$/i,
         type: "asset/resource",
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "./img/[name].[ext]",
-            publicPath: "../img",
-            outputPath: "/img",
-          },
-        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
         use: {
-          loader: "file-loader",
           options: {
             name: "./fonts/[name].[ext]",
             publicPath: "../fonts",
@@ -75,9 +67,7 @@ module.exports = {
     extensions: [".js", ".jsx", ".png", ".jpg", ".jpeg", ".svg"],
     alias: {
       "@": path.resolve(__dirname, "src"),
-      "@img": path.resolve(__dirname, "src/assets/img"),
-      "@vid": path.resolve(__dirname, "src/assets/vid"),
-      "@fonts": path.resolve(__dirname, "src/assets/fonts"),
+      "@assets": path.resolve(__dirname, "src/assets"),
       "@styles": path.resolve(__dirname, "src/styles"),
     },
   },

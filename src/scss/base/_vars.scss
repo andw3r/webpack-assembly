@@ -1,0 +1,76 @@
+// ===== Colors ===== //
+$bsPrimary: #0d6efd; // primary
+$bsSecondary: #6c757d; // secondary
+$bsSuccess: #198754; // success
+$bsInfo: #0dcaf0; // info
+$bsWarning: #ffc107; // warning
+$bsDanger: #dc3545; // danger
+$bsLight: #f8f9fa; // light
+$bsDark: #212529; // dark
+
+// ===== Breakpoints ===== //
+$breakpointSm: 575.98px; // Small
+$breakpointMd: 767.98px; // Medium
+$breakpointLg: 991.98px; // Large
+$breakpointXl: 1199.98px; // Extra large
+$breakpointXxl: 1399.98px; // Extra extra large
+
+// ===== Containers ===== //
+$containerPadding: 40;
+$containerSidePadding: math.div($containerPadding, 2);
+$containerSm: 540px; // Small
+$containerMd: 720px; // Medium
+$containerLg: 960px; // Large
+$containerXl: 1140px; // Extra large
+$containerXxl: 1320px; // Extra extra large
+
+// ===== Burger Menu ===== //
+$burgerBreakpoint: $breakpointMd;
+$burgerColor: "black";
+$burgerActiveColor: "white";
+
+// ===== Fonts ===== //
+$mainFont: sans-serif;
+$primaryFont: sans-serif;
+$secondaryFont: sans-serif;
+
+// ===== Container ===== //
+.container {
+  margin: 0 auto;
+  width: $containerXll;
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: $breakpointSm) {
+  .container {
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+
+// `md` applies to smal l devices (landscape phones, less than 768px)
+@media (max-width: $breakpointMd) {
+  .container {
+    width: $containerSm;
+  }
+}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: $breakpointLg) {
+  .container {
+    width: $containerMd;
+  }
+}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: $breakpointXl) {
+  .container {
+    width: $containerlg;
+  }
+}
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: $breakpointXxl) {
+  // .container {
+  // }
+}
